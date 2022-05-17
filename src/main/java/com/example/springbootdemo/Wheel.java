@@ -1,7 +1,8 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.CreateBigBike;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Wheel implements CreateBigBike {
     @Override
     public void createBigBike() {
