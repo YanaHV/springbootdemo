@@ -9,11 +9,16 @@ import org.springframework.context.event.EventListener;
 @SpringBootApplication
 public class SpringbootdemoApplication{
  private final BigBike bigBike;
+private final BigBikeWithListInjected bigBikeWithListInjected;
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootdemoApplication.class, args);
 	}
 	@EventListener(ContextRefreshedEvent.class)
 	public void bigBikeMethod() {
 		bigBike.allDependents();
+	}
+	@EventListener(ContextRefreshedEvent.class)
+	public void bigBikeWithListInject() {
+		bigBikeWithListInjected.elements();
 	}
 }
