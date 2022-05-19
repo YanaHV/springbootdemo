@@ -9,8 +9,11 @@ public class SpringbootdemoApplication {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
         String str = context.getBean(String.class);
-//        String str = context.getBean("myContinent");
+
+//      String str = context.getBean("myLastName");
+
         System.out.println(str);
+        context.close();
     }
 }
 
