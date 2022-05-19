@@ -8,7 +8,8 @@ public class SpringbootdemoApplication {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
-        String str = (String) context.getBean("myContinent");
+        String str = context.getBean(String.class);
+//        String str = context.getBean("myContinent");
         System.out.println(str);
     }
 }
